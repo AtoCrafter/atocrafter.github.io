@@ -1,0 +1,80 @@
+<!doctype html>
+
+<meta charset="utf-8">
+<title>面倒くさいもぢんぐの日々</title>
+<link href="/stylesheets/normalize.css" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/ModderBlack.css" rel="stylesheet" type="text/css" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<header>
+  <h1><a href="/">面倒くさいもぢんぐの日々</a></h1>
+</header>
+
+<main>
+  <header>
+    <h1>IC2 Crop Calculator</h1>
+  </header>
+  <section>
+    <h2 id="section">概要</h2>
+
+<p>IndustrialCraft2 の農業要素である品種改良についての計算機です。
+各品種を親とした時、目的の品種に突然変異する確率をそれぞれ算出します。
+<em>複数の品種を親としたときは平均になります。</em>
+<a href="http://www54.atwiki.jp/mi_ic2/">IndustrialCraft2ソースコード木パイプ</a>
+及び IndustrialCraft2 experimental ビルド 301 のバイナリを参考に作成しています。
+<em>今現在、 experimental 版と lf 版の農業要素にほぼ差はありません。</em></p>
+
+<h2 id="section-1">注意</h2>
+
+<p>突然変異先の環境が成長可能な環境か、による候補へ含めるかどうかの計算を
+無視しているため、結果はあくまで<strong>相対的な目安である。</strong>
+<em>すなわち、目的の品種以外が成長できない環境を用意すれば、
+計算結果よりも高い確率で目的の品種へ突然変異が行える。</em></p>
+
+<p><a href="http://www54.atwiki.jp/mi_ic2/">IndustrialCraft2ソースコード木パイプ</a>
+で言及されているバグについても現状に沿うためにバグ通りの計算方法を採用しているが、
+修正された際、計算結果が修正後の実際と異なる可能性がある。</p>
+
+<section id="input">
+    <h2>入力欄</h2>
+    <form>
+        <label for="target">目的の品種
+            <select name="target" id="target"></select>
+        </label>
+        <label for="gregtech">
+            <input type="checkbox" name="addon" value="gregtech" id="gregtech" />
+            GregTech
+        </label>
+    </form>
+</section>
+
+<section id="result">
+    <h2>計算結果</h2>
+    <table>
+        <thead>
+            <tr><th>作物</th><th>確率</th></tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</section>
+
+<script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+
+<script src="/javascripts/ic2cropcalculator.js"></script>
+
+
+  </section>
+</main>
+
+<aside>
+</aside>
+
+<footer>
+  <span class="copyright">&copy; 2014 AtoCrafter</span>
+  <a href="//twitter.com/AtoCrafter"><i class="fa fa-twitter"></i></a>
+  <a href="//github.com/AtoCrafter"><i class="fa fa-github-alt"></i></a>
+</footer>

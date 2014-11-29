@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/* line 1, /Users/kohara/projects/MinecraftModding/AtoCrafterPages/source/stylesheets/ModderBlack.scss */
+body {
+  color: #BBB;
+  font-size: 16px;
+  font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.7;
+  background: url(/images/dark_geometric.png);
+  text-shadow: 1px 1px 1px black; }
+  /* line 9, /Users/kohara/projects/MinecraftModding/AtoCrafterPages/source/stylesheets/ModderBlack.scss */
+  body > header h1 {
+    background-color: black;
+    margin: 0;
+    padding: 0.2em 1em; }
+    /* line 13, /Users/kohara/projects/MinecraftModding/AtoCrafterPages/source/stylesheets/ModderBlack.scss */
+    body > header h1 a {
+      color: white;
+      opacity: 0.3;
+      transition: opacity 0.2s linear; }
+    /* line 18, /Users/kohara/projects/MinecraftModding/AtoCrafterPages/source/stylesheets/ModderBlack.scss */
+    body > header h1 a:hover {
+      color: white;
+      opacity: 0.8; }
+  /* line 24, /Users/kohara/projects/MinecraftModding/AtoCrafterPages/source/stylesheets/ModderBlack.scss */
+  body > footer {
+    background-color: black;
+    opacity: 0.5;
+    margin-top: 10em;
+    text-align: right; }
+    /* line 29, /Users/kohara/projects/MinecraftModding/AtoCrafterPages/source/stylesheets/ModderBlack.scss */
+    body > footer i.fa {
+      padding: 0.5em;
+      font-size: 32px; }
+    /* line 33, /Users/kohara/projects/MinecraftModding/AtoCrafterPages/source/stylesheets/ModderBlack.scss */
+    body > footer .copyright {
+      margin-right: 2em; }
+
+/* line 39, /Users/kohara/projects/MinecraftModding/AtoCrafterPages/source/stylesheets/ModderBlack.scss */
+h1 {
+  margin: 1.5em; }
+
+/* line 43, /Users/kohara/projects/MinecraftModding/AtoCrafterPages/source/stylesheets/ModderBlack.scss */
+main {
+  width: 60em;
+  max-width: 90%;
+  margin: auto; }
+
+/* line 49, /Users/kohara/projects/MinecraftModding/AtoCrafterPages/source/stylesheets/ModderBlack.scss */
+a {
+  color: #9999ff;
+  transition: color 0.2s linear;
+  text-decoration: none; }
+
+/* line 54, /Users/kohara/projects/MinecraftModding/AtoCrafterPages/source/stylesheets/ModderBlack.scss */
+a:hover {
+  color: #ccccff; }
+
+/* line 58, /Users/kohara/projects/MinecraftModding/AtoCrafterPages/source/stylesheets/ModderBlack.scss */
+::selection {
+  background-color: rgba(255, 255, 200, 0.2); }

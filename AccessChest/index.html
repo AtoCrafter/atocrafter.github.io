@@ -1,0 +1,213 @@
+<!doctype html>
+
+<meta charset="utf-8">
+<title>面倒くさいもぢんぐの日々</title>
+<link href="/stylesheets/normalize.css" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/ModderBlack.css" rel="stylesheet" type="text/css" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<header>
+  <h1><a href="/">面倒くさいもぢんぐの日々</a></h1>
+</header>
+
+<main>
+  <header>
+    <h1>Access Chest</h1>
+  </header>
+  <section>
+    <p><img alt="Access Chest の GUI 画面サンプル" src="/images/ScreenshotAccessChest.png" /></p>
+
+<h2 id="section">特徴</h2>
+
+<ul>
+  <li>どこからでも手に持ったままアクセスできるチェスト</li>
+  <li>最大13824スタックの超巨大容量</li>
+  <li>16色の色分け管理</li>
+  <li>その他便利な追加機能</li>
+</ul>
+
+<h2 id="section-1">導入方法</h2>
+
+<h3 id="mod">前提 MOD</h3>
+
+<ul>
+  <li>Minecraft Forge</li>
+</ul>
+
+<h3 id="section-2"><strong>ダウンロード</strong></h3>
+
+<p><a href="https://copy.com/aJVfaTq376Zb">通常版ダウンロード</a> (通常はこちら)</p>
+
+<p><a href="https://copy.com/0pJSiQUxB3Cm">開発版ダウンロード</a></p>
+
+<p><a href="https://github.com/AtoCrafter/AccessChest">ソースコード</a></p>
+
+<h3 id="section-3">インストール</h3>
+
+<p>ダウンロードした zip ファイルを .minecraft/mods フォルダに直接入れてください。（クライアント・サーバー共に共通）</p>
+
+<h2 id="section-4">使い方</h2>
+
+<p>アイテムを持って右クリックをすると各色に応じたチェストを開くことができます。</p>
+
+<p>Access Chest Class-1 は Class-0 の 8 倍の容量を、Class-2 は Class-1 の 8 倍の容量を……という具合に Class によって最大容量が異なります。
+Class-0 の容量が 27 スタックなので消費したチェストと同等の容量を持つことになります。</p>
+
+<p>Class が違っても色が同じなら中身は同じになります。逆に染色で色を変えると中身は異なります。</p>
+
+<p>アイテムを持ってスニークキー（デフォルトでは Shift）を押しながら右クリックすると通常のチェストと同じように設置できます。
+設置された Access Chest を壊すとアイテムとして回収できます。そのとき中身はこぼれません。</p>
+
+<p>Access Chest とほぼ同じ機能を持ち、持ち運べないなどのいくつかの機能が制限された Compressed Chest も追加されます。
+こちらはレシピにエンダーパールを使いません。</p>
+
+<h3 id="section-5">各種機能</h3>
+
+<h4 id="section-6">フィルタ</h4>
+
+<p>Access Chest を開いたとき右下のテキストボックスに文字列を入力するとアイテム名にその文字列を含むアイテムがリストアップされます。アイテム ID, ダメージ値でも検索出来ます。
+文字列の入力を始めるにはチャットキー（デフォルトでは T）やコマンドキー（デフォルトでは /）を押すかテキストボックス内をクリックします。
+テキストボックス内の文字列は Clear ボタンで空にできます。
+テキストボックス内でエンターキーを押すとその時点での文字列で厳密に一致する検索も可能です。これは<code>stone</code>で Stone Brick などの余計な候補が出てくる場合に<code>Stone(Enter キー)</code>で Stone のみを表示させるなどに使います。</p>
+
+<h4 id="rename">ネーミング (Rename)</h4>
+
+<p>現在の色の Access Chest に名前をつけることができます。Rename ボタンを押したときのテキストボックスに入力されている文字列によって Access Chest のアイテム名が変化します。</p>
+
+<h4 id="sort">ソート (Sort)</h4>
+
+<p>Sort ボタンで ID 順に並べ替えます。</p>
+
+<h4 id="sort-1">カスタムソート (数字 + Sort)</h4>
+
+<p>通常のソートはID順に並べられますが、自分で好きに優先順位をつけられます。</p>
+
+<p>数字キーを押しながら Sort ボタンをクリックすると、フィルターによって現在表示中のアイテム全てに押した数字キーに対応する優先順位をつけます。
+優先順位は 1～9 キーで 1～9 を、0 キーで 10 を割り当てます。
+デフォルトの優先順位は 7 です。</p>
+
+<p>フィルターに<code>pri:(数字)</code>を入力するとその優先順位がついたアイテムが検索されます。</p>
+
+<h4 id="storeshift-">一括収納 (Store（Shift キーで表示）)</h4>
+
+<p>StoreInv ボタンで手持ち欄以外のインベントリ内のアイテムを、StoreEqp ボタンで手持ち欄のアイテムを全てチェストに収納します。</p>
+
+<h4 id="ejectshift-">一括排出 (Eject（Shift キーで表示）)</h4>
+
+<p>Eject ボタンで表示されているチェスト内の全てのアイテムをドロップします。
+フィルタも有効です。</p>
+
+<p>大量のアイテムによってワールドがフリーズするなどの問題を防ぐため、一度に排出できる量を制限しています。
+この量はコンフィグで設定可能です。デフォルトでは 96 スタック（1 画面分）となっています。</p>
+
+<h4 id="section-7">自動収納</h4>
+
+<p>アイテムを拾おうとしたとき、インベントリ内に Access Chest
+を持っていれば、インベントリ内が一杯でも Access Chest 内に直接収納できます。</p>
+
+<p>コンフィグファイルから無効にすることができます。</p>
+
+<h3 id="section-8">レシピ</h3>
+
+<h4 id="access-chest">Access Chest</h4>
+
+<h5 id="access-chest-class-0----">Access Chest Class-0 : チェスト + エンダーパール</h5>
+
+<p><img alt="Access Chest Class-0" src="/images/RecipeAccessChest0.png" /></p>
+
+<h5 id="access-chest-class-1--access-chest-class-08--">Access Chest Class-1 : Access Chest Class-0(8) + ラピスラズリブロック</h5>
+
+<p><img alt="Access Chest Class-1" src="/images/RecipeAccessChest1.png" /></p>
+
+<h5 id="access-chest-class-2--access-chest-class-18--">Access Chest Class-2 : Access Chest Class-1(8) + 金ブロック</h5>
+
+<p><img alt="Access Chest Class-2" src="/images/RecipeAccessChest2.png" /></p>
+
+<h5 id="access-chest-class-3--access-chest-class-28--">Access Chest Class-3 : Access Chest Class-2(8) + ダイヤモンドブロック</h5>
+
+<p><img alt="Access Chest Class-3" src="/images/RecipeAccessChest3.png" /></p>
+
+<h4 id="compressed-chest">Compressed Chest</h4>
+
+<h5 id="compressed-chest-class-1--8--">Compressed Chest Class-1 : チェスト(8) + ダイヤモンド</h5>
+
+<p><img alt="Compressed Chest Class-1" src="/images/RecipeCompressedChest1.png" /></p>
+
+<h5 id="compressed-chest-class-2--compressed-chest-class-18--">Compressed Chest Class-2 : Compressed Chest Class-1(8) + ダイヤモンドブロック</h5>
+
+<p><img alt="Compressed Chest Class-2" src="/images/RecipeCompressedChest2.png" /></p>
+
+<h4 id="section-9">コピーレシピ</h4>
+
+<p>コピー後の Access Chest は Class を上げるためのレシピには使用できなくなりますが、その他の機能は同じです。</p>
+
+<h5 id="access-chest-class-1-copy-2--access-chest-class-1--">Access Chest Class-1 Copy (2) : Access Chest Class-1 + エンダーチェスト</h5>
+
+<p><img alt="Access Chest Class-1" src="/images/RecipeCopy1.png" /></p>
+
+<h5 id="access-chest-class-2-copy-2--access-chest-class-2--3">Access Chest Class-2 Copy (2) : Access Chest Class-2 + エンダーチェスト(3)</h5>
+
+<p><img alt="Access Chest Class-2" src="/images/RecipeCopy2.png" /></p>
+
+<h5 id="access-chest-class-32--access-chest-class-3--8">Access Chest Class-3(2) : Access Chest Class-3 + エンダーチェスト(8)</h5>
+
+<p><img alt="Access Chest Class-3" src="/images/RecipeCopy3.png" /></p>
+
+<h3 id="section-10">コンフィグ</h3>
+
+<ul>
+  <li>ejectStackLimit : 一括排出で排出されるスタックの限界数を決めます。大量のアイテムでプログラムが固まる、といった問題がある場合は少なくしてください。</li>
+  <li>rowsScroll : 1 回のホイールスクロールでどれだけページを移動させるかです。デフォルトでは 8 行（= 1 ページ）になっています。</li>
+  <li>enableAutoCollect : 自動収納機能を有効にするかです。デフォルトでは有効になっています。</li>
+</ul>
+
+<h3 id="section-11">紹介動画</h3>
+
+<p><a href="http://www.nicovideo.jp/watch/sm18955909">ニコニコ動画</a></p>
+
+<h2 id="section-12">サポート</h2>
+
+<p>バグ、要望がありましたら<a href="http://forum.minecraftuser.jp/viewtopic.php?f=13&amp;t=4123">マインクラフト　非公式日本ユーザーフォーラム</a>までご連絡ください。</p>
+
+<h3 id="section-13">最新バージョン対応について</h3>
+
+<p>この MOD は大規模とは言わずも、中規模に近い大きさになってしまったため、素早く対応するのは困難です。
+<a href="https://github.com/AtoCrafter/AccessChest">GitHub</a>にてソースコードを公開していますので、修正にご協力いただけると幸いです。</p>
+
+<h3 id="section-14">既知の不具合</h3>
+
+<ul>
+  <li>ネーミング機能が動作しない</li>
+  <li>シングルプレイのワールドを読み込んだ後、タイトルに戻りマルチプレイのサーバーに接続するとクラッシュする</li>
+</ul>
+
+<h3 id="section-15">変更履歴</h3>
+
+<p><a href="https://github.com/AtoCrafter/AccessChest/blob/master/ChangeLog.txt">こちらから</a></p>
+
+<h3 id="section-16">過去のバージョン</h3>
+
+<ul>
+  <li><a href="release/AccessChest.1.1.0.zip">1.1.0 (for Minecraft 1.2.5)</a></li>
+  <li><a href="release/AccessChest.2.1.1.Universal.forMC1.3.2.zip">2.1.1 (for Minecraft 1.3.2)</a></li>
+  <li><a href="release/AccessChest.2.2.6.Universal.forMC1.4.7.zip">2.2.6 (for Minecraft 1.4.7)</a></li>
+  <li><a href="release/AccessChest.2.3.1.Universal.forMC1.5.2.zip">2.3.1 (for Minecraft 1.5.2)</a></li>
+</ul>
+
+<h2 id="section-17">謝辞</h2>
+
+<p>テクスチャを提供して頂きました the M さん、誠にありがとうございます。</p>
+
+
+  </section>
+</main>
+
+<aside>
+</aside>
+
+<footer>
+  <span class="copyright">&copy; 2014 AtoCrafter</span>
+  <a href="//twitter.com/AtoCrafter"><i class="fa fa-twitter"></i></a>
+  <a href="//github.com/AtoCrafter"><i class="fa fa-github-alt"></i></a>
+</footer>
